@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+	<body>
+		<div class="background">
+			<div class="card">
+				<div class="photo"></div>
+				<h1>STEPS</h1>
+				<p>THIS WEEK</p>
+				<div class="chart">
+					<div class="bar bar1"><span>20000</span></div>
+					<div class="bar bar1"><span>10000</span></div>
+					<div class="bar bar1"><span>15000</span></div>
+					<div class="bar bar1"><span>24000</span></div>
+					<div class="bar bar1"><span>7000</span></div>
+					<div class="bar bar1"><span>7000</span></div>
+					<div class="bar bar1"><span>10000</span></div>
+				</div>
+				<h2>93,000</h2>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		'use strict';
+		var body = document.body;
+		var tilted = false;
+		
+		// 点击切换 本质时删除一个tetails一个类或者添加一个
+		var toggleTilt = function () {
+			tilted = !tilted;
+			if ( tilted ){
+				body.classList.add('details')
+			}else{
+				body.classList.remove('details');
+			}
+		}
+		// 监听点击事件
+		body.addEventListener('click',toggleTilt);
+		// 监听移动端触摸事件
+		body.addEventListener('touchstart',toggleTilt);
+	</script>
+</html>
